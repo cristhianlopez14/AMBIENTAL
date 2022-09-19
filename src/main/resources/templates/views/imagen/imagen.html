@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1>Imagen</h1>
+    <button><a th:href="formulario">Registrar</a></button>
 
     <table border="1">
         <tr>
@@ -56,6 +57,12 @@
                         </div>
                     </div>
                 </div>
+
+                <td>
+                    <button>
+                        <a role="button" th:href="@{/imagen/delete/}+${i.idImagen}" onclick="return confirm('Estás seguro que quieres eliminar la imagen');">Eliminar</a>
+                    </button>
+                </td>
                 
             </td>
         </tr>
